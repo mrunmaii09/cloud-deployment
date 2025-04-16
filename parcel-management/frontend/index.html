@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ParcelPro - Smart Parcel Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">📦 Parcel Pohchao</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#dashboard">Dashboard</a>
+      <button class="login-btn" onclick="toggleLogin()">Login</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Manage Your Parcels Seamlessly</h1>
+      <p>From shipping to delivery, we streamline every step of your logistics journey with powerful tools and clean design.</p>
+      <a href="#dashboard" class="cta-btn">Go to Dashboard</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.8uxH37g1lCMifv5uZI6eGgHaE7?w=212&h=180&c=7&r=0&o=5&pid=1.7" alt="Parcel Illustration">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="feature-card">
+      <h3>📦 Real-time Tracking</h3>
+      <p>Track your parcels at every stage of their journey.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🔒 Secure Management</h3>
+      <p>Login-based secure access for managing parcels.</p>
+    </div>
+    <div class="feature-card">
+      <h3>📊 Clean Dashboard</h3>
+      <p>Minimal UI that makes managing data easy and professional.</p>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <main id="dashboard">
+    <h2 class="section-title">📋 Dashboard</h2>
+    <form id="parcelForm">
+      <div class="form-grid">
+        <input type="text" id="sender" placeholder="Sender Name" required />
+        <input type="text" id="receiver" placeholder="Receiver Name" required />
+        <input type="email" id="senderEmail" placeholder="Sender Email" required />
+        <input type="email" id="receiverEmail" placeholder="Receiver Email" required />
+        <input type="text" id="senderContact" placeholder="Sender Contact" required />
+        <input type="text" id="receiverContact" placeholder="Receiver Contact" required />
+        <input type="text" id="address" placeholder="Delivery Address" required />
+        <input type="number" id="weight" placeholder="Weight (kg)" required />
+        <button type="submit">Add Parcel</button>
+      </div>
+    </form>
+
+    <div id="parcelList" class="parcel-list"></div>
+  </main>
+
+  <!-- Login Modal -->
+  <div class="login-modal" id="loginModal">
+    <div class="login-box">
+      <span class="close" onclick="toggleLogin()">×</span>
+      <h3>Login to ParcelPro</h3>
+      <input type="text" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button class="cta-btn">Login</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
